@@ -6,7 +6,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <div className="mb-4">
+          <div className="mb-5">
             <AppSidebarDropdown />
           </div>
 
