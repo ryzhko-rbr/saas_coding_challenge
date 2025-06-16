@@ -101,11 +101,11 @@ const settingsNav = [
 export function SidebarList() {
   return (
     <SidebarGroupContent className="flex flex-col h-full overflow-hidden">
-      <div className="overflow-y-auto">
+      <div className="overflow-y-auto mb-2">
         <List list={mainNav} />
 
         <Button
-          className="flex items-center justify-start w-full hover:bg-secondary-background rounded-[0.75rem] h-10.5 px-3"
+          className="flex items-center justify-start !px-2 w-full hover:bg-secondary-background rounded-[0.75rem] h-10.5"
           variant="ghost">
           <Plus className="min-w-5 min-h-5 max-w-5 max-h-5 text-placeholder-gray" />
           <span className="text-placeholder-gray body-2-loose">
