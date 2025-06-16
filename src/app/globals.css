@@ -167,10 +167,15 @@ html {
 }
 
 /* Text Styles */
-
 .title-1 {
   font-size: 1.125rem; /* 18px */
   line-height: 1.5rem; /* 24px */
+  letter-spacing: 0;
+}
+
+.title-2 {
+  font-size: 1rem; /* 16px */
+  line-height: 1.25rem; /* 20px */
   letter-spacing: 0;
 }
 

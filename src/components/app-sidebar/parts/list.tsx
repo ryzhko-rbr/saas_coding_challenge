@@ -8,7 +8,7 @@ import {
   SidebarMenuItem,
 } from '@/components';
 import { cn } from '@/lib/utils';
-import { ChevronUp } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { SVGProps } from 'react';
 
@@ -41,7 +41,7 @@ export function List({ list }: ListProps) {
             <SidebarMenuItem>
               <SidebarMenuButton
                 onClick={() => toggleIndex(index)}
-                className="bg-white hover:bg-light-stone rounded-[0.75rem] h-10.5 px-4">
+                className="bg-white hover:bg-light-stone rounded-[0.75rem] h-10.5 pl-2 pr-1.5">
                 <span className="flex items-center gap-2">
                   {item.icon ? (
                     <item.icon className="min-w-5 min-h-5 max-w-5 max-h-5" />
@@ -53,14 +53,14 @@ export function List({ list }: ListProps) {
                   </span>
                 </span>
 
-                <span className="flex items-center gap-2 ml-auto">
+                <span className="flex items-center gap-1 ml-auto">
                   {item.notifications !== undefined && (
                     <span className="bg-accent rounded-2xl h-5.5 px-1 min-w-6.5 center body-1 text-charcoal">
                       {item.notifications}
                     </span>
                   )}
                   {item.submenu.length > 0 && (
-                    <ChevronUp
+                    <ChevronDown
                       className={cn(
                         'transition-transform duration-200',
                         isOpen && 'rotate-180',
@@ -71,8 +71,8 @@ export function List({ list }: ListProps) {
               </SidebarMenuButton>
 
               {item.submenu.length > 0 && isOpen && (
-                <div className="pl-6 pr-8 relative">
-                  <span className="absolute w-0.5 h-full left-6 top-0 bg-platinum" />
+                <div className="pl-5 pr-4 relative">
+                  <span className="absolute w-0.5 h-full left-4 top-0 bg-platinum" />
                   {item.submenu.map(menuItem => (
                     <CollapsibleContent
                       key={menuItem.title}
